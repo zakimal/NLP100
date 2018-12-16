@@ -10,7 +10,7 @@ func main() {
 	str = strings.Replace(str, ".", "", -1)
 	dict := make(map[string]int)
 	for i, w := range strings.Split(str, " ") {
-		switch i+1 {
+		switch i + 1 {
 		case 1, 5, 6, 7, 8, 9, 15, 16, 19:
 			dict[string([]rune(w)[0])] = i
 		default:

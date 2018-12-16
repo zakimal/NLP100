@@ -16,7 +16,7 @@ func alternativeConcatenate(str1, str2 string) string {
 
 	r1, r2 := []rune(str1), []rune(str2)
 	n1, n2 := len(r1), len(r2)
-	ret := make([]rune, n1 + n2)
+	ret := make([]rune, n1+n2)
 	for i := 0; i < n1; i++ {
 		ret[2*i], ret[2*i+1] = r1[i], r2[i]
 	}
