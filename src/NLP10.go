@@ -10,7 +10,7 @@ import (
 
 func main() {
 	count := 0
-	if len(os.Args) != 2{
+	if len(os.Args) != 2 {
 		log.Fatalf("%s: Usage: %s <file>\n", os.Args[0])
 	}
 	fp, err := os.Open(os.Args[1])

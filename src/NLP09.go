@@ -14,8 +14,8 @@ func main() {
 		if len(v) > 4 {
 			rs := []rune(v)
 			v = string(rs[0])
-			v += shuffle(rs[1:len(rs)-1])
-			v += string(rs[len(rs) - 1])
+			v += shuffle(rs[1 : len(rs)-1])
+			v += string(rs[len(rs)-1])
 		}
 		ret += v + " "
 	}
@@ -26,9 +26,9 @@ func main() {
 
 func shuffle(r []rune) string {
 	random := rand.New(rand.NewSource(time.Now().UnixNano()))
-	for i := 0; i < len(r) - 1; i++ {
+	for i := 0; i < len(r)-1; i++ {
 		j := random.Intn(len(r) - i - 1)
-		r[len(r) - i - 1], r[j] = r[j], r[len(r) - i - 1]
+		r[len(r)-i-1], r[j] = r[j], r[len(r)-i-1]
 	}
-	return  string(r)
+	return string(r)
 }

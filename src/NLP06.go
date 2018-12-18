@@ -74,7 +74,7 @@ func getDifference(X, Y [][]rune) [][]rune {
 }
 
 func convertToStringSlice(rs [][]rune) []string {
-	ret := make([]string ,0)
+	ret := make([]string, 0)
 	for _, r := range rs {
 		ret = append(ret, string(r))
 	}

@@ -34,9 +34,9 @@ func main() {
 		output[(counter-1)%n] = l
 	}
 	if counter < n {
-		output = output[:counter - 1]
+		output = output[:counter-1]
 	}
-	start := (counter - 1)%n
+	start := (counter - 1) % n
 	output = append(output[start:], output[:start]...)
 	for _, l := range output {
 		fmt.Println(string(l))

@@ -25,7 +25,7 @@ func main() {
 	}
 	reader := bufio.NewReader(src)
 	lnum := lineCounter(os.Args[1])
-	lnum = lnum/n+1
+	lnum = lnum/n + 1
 	if lnum%n == 0 {
 		lnum--
 	}

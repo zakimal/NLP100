@@ -8,19 +8,19 @@ import (
 )
 
 func main() {
-	col1, err := os.Open("/Users/ozaki/go/src/NLP100/data/col1.txt")
+	col1, err := os.Open("/Users/ozaki/go/src/NLP100/date/col1.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer col1.Close()
-	col2, err := os.Open("/Users/ozaki/go/src/NLP100/data/col2.txt")
+	col2, err := os.Open("/Users/ozaki/go/src/NLP100/date/col2.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer col2.Close()
 	reader1 := bufio.NewReader(col1)
 	reader2 := bufio.NewReader(col2)
-	dstName := "/Users/ozaki/go/src/NLP100/data/merged.txt"
+	dstName := "/Users/ozaki/go/src/NLP100/date/merged.txt"
 	dst, err := os.Create(dstName)
 	if err != nil {
 		log.Fatal(err)

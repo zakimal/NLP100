@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(getTemplate(12, "気温" , 22.4))
+	fmt.Println(getTemplate(12, "気温", 22.4))
 }
 
 func getTemplate(x, y, z interface{}) string {

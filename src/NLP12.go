@@ -11,7 +11,7 @@ func main() {
 	if len(os.Args) != 2 {
 		log.Fatal("%s: Usage: %s <file>\n", os.Args[0])
 	}
-	src, err := os.Open("/Users/ozaki/go/src/NLP100/data/hightemp.txt")
+	src, err := os.Open("/Users/ozaki/go/src/NLP100/date/hightemp.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -21,7 +21,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	dn := "/Users/ozaki/go/src/NLP100/data/col" + os.Args[1] + ".txt"
+	dn := "/Users/ozaki/go/src/NLP100/date/col" + os.Args[1] + ".txt"
 	dst, err := os.Create(dn)
 	if err != nil {
 		log.Fatal(err)

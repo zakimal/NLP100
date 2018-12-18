@@ -33,7 +33,7 @@ func main() {
 		if r == rune('\t') {
 			ncol++
 		} else if ncol == WANT {
-				word = append(word, r)
+			word = append(word, r)
 		}
 		if r == rune('\n') {
 			words = append(words, word)
@@ -49,6 +49,7 @@ func main() {
 }
 
 type runes [][]rune
+
 func (rs runes) Len() int { return len(rs) }
 func (rs runes) Less(i, j int) bool {
 	for k := 0; k < len(rs[i]) && k < len(rs[j]); k++ {
@@ -66,7 +67,7 @@ func (rs runes) Swap(i, j int) { rs[i], rs[j] = rs[j], rs[i] }
 func toString(r []rune) string {
 	l := len(r)
 	ret := make([]string, l)
-	for i :=range ret {
+	for i := range ret {
 		ret = append(ret, string(r[i]))
 	}
 	return strings.Join(ret, "")
@@ -75,10 +76,10 @@ func toString(r []rune) string {
 func getUniq(rs runes) runes {
 	i := 0
 	for {
-		if  reflect.DeepEqual(rs[i],rs[i+1]) {
+		if reflect.DeepEqual(rs[i], rs[i+1]) {
 			copy(rs[i:], rs[i+1:])
 			rs[len(rs)-1] = nil
-			rs = rs[:len(rs) - 1]
+			rs = rs[:len(rs)-1]
 		} else {
 			i++
 		}
